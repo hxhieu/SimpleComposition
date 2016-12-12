@@ -38,11 +38,15 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Attributes\SimpleComponentAttribute.cs" />
-    <Compile Include="Attributes\SimpleEntityAttribute.cs" />
+    <Compile Include="Exceptions\ContainerInitialiseException.cs" />
     <Compile Include="DryIoc\Container.cs" />
     <Compile Include="DryIoc\ImTools.cs" />
+    <Compile Include="Abstracts\IComponent.cs" />
+    <Compile Include="Core\ISimpleCompositionContainer.cs" />
+    <Compile Include="Core\ISimpleCompositionRegistration.cs" />
+    <Compile Include="Abstracts\IEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleComposition.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
