@@ -3,7 +3,7 @@ using System;
 
 namespace SimpleComposition.Core
 {
-    public interface ISimpleCompositionContainer
+    public interface ISimpleCompositionContainer : IDisposable
     {
         void Register(Type contract, Type service, bool singleton = false);
         void Register(Type service, bool singleton = false);
@@ -15,15 +15,24 @@ namespace SimpleComposition.Core
     /// </summary>
     public class SimpleCompositionContainer : ISimpleCompositionContainer
     {
-        private static Container _container = new Container();
+        private Container _container = new Container();
+
+        public void Dispose()
+        {
+            if (!_container.IsDisposed) _container.Dispose();
+        }
 
         public void Register(Type service, bool singleton = false)
         {
+            if (_container.IsRegistered(service)) return;
+
             _container.Register(service, singleton ? Reuse.Singleton : Reuse.Transient);
         }
 
         public void Register(Type contract, Type service, bool singleton = false)
         {
+            if (_container.IsRegistered(contract)) return;
+
             _container.Register(contract, service, singleton ? Reuse.Singleton : Reuse.Transient);
         }
 

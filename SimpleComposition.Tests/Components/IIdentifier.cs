@@ -10,7 +10,7 @@ namespace SimpleComposition.Tests.Components
         int Age { get; }
     }
 
-    internal class Identifier : IIdentifier, IComponent
+    internal class Identifier : IIdentifier, ITransientComponent
     {
         public int Age
         {

@@ -66,7 +66,6 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Components\IIdentifier.cs" />
-    <Compile Include="DataCorrectnessTests.cs" />
     <Compile Include="Entities\Dog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrationTests.cs" />

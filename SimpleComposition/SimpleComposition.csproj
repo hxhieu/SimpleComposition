@@ -38,10 +38,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstracts\IPersitentComponent.cs" />
     <Compile Include="Exceptions\ContainerInitialiseException.cs" />
     <Compile Include="DryIoc\Container.cs" />
     <Compile Include="DryIoc\ImTools.cs" />
-    <Compile Include="Abstracts\IComponent.cs" />
+    <Compile Include="Abstracts\ITransientComponent.cs" />
     <Compile Include="Core\ISimpleCompositionContainer.cs" />
     <Compile Include="Core\ISimpleCompositionRegistration.cs" />
     <Compile Include="Abstracts\IEntity.cs" />
