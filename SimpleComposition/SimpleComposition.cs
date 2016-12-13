@@ -27,14 +27,14 @@ namespace SimpleComposition
 
                 var componentTypes = assemblies.SelectMany(a =>
                     a.DefinedTypes.Where(t =>
-                        t.ImplementedInterfaces.Any(i => i == typeof(ITransientComponent) || i == typeof(IPersitentComponent))
+                        t.ImplementedInterfaces.Any(i => i == typeof(ITransientComponent) || i == typeof(IPersistentComponent))
                     )
                 );
 
                 foreach (var type in componentTypes)
                 {
-                    var singleton = type.ImplementedInterfaces.Any(i => i == typeof(IPersitentComponent));
-                    var contracts = type.ImplementedInterfaces.Where(i => i != typeof(ITransientComponent) && i != typeof(IPersitentComponent));
+                    var singleton = type.ImplementedInterfaces.Any(i => i == typeof(IPersistentComponent));
+                    var contracts = type.ImplementedInterfaces.Where(i => i != typeof(ITransientComponent) && i != typeof(IPersistentComponent));
                     foreach (var contract in contracts)
                     {
                         _container.Register(contract, type.AsType(), singleton);

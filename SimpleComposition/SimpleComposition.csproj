@@ -38,16 +38,20 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstracts\IPersitentComponent.cs" />
+    <Compile Include="Abstracts\IPersistentComponent.cs" />
     <Compile Include="Exceptions\ContainerInitialiseException.cs" />
-    <Compile Include="DryIoc\Container.cs" />
-    <Compile Include="DryIoc\ImTools.cs" />
     <Compile Include="Abstracts\ITransientComponent.cs" />
     <Compile Include="Core\ISimpleCompositionContainer.cs" />
     <Compile Include="Core\ISimpleCompositionRegistration.cs" />
     <Compile Include="Abstracts\IEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleComposition.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="DryIoc, Version=2.9.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DryIoc.dll.2.9.4\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\DryIoc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -15,11 +15,16 @@ namespace SimpleComposition.Core
     /// </summary>
     public class SimpleCompositionContainer : ISimpleCompositionContainer
     {
-        private Container _container = new Container();
+        public bool IsDisposed { get; set; }
+        private IContainer _container = new Container(rules => rules.WithoutThrowOnRegisteringDisposableTransient());
 
         public void Dispose()
         {
-            if (!_container.IsDisposed) _container.Dispose();
+            if (!IsDisposed)
+            {
+                _container.Dispose();
+                IsDisposed = true;
+            }
         }
 
         public void Register(Type service, bool singleton = false)
