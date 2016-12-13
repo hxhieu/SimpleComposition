@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>MitmeoStudio.SimpleComposition</id>
+    <version>0.0.1</version>
+    <title>MitmeoStudio.SimpleComposition</title>
+    <authors>Hugh Hoang</authors>
+    <owners>Mitmeo Studio Limited</owners>
+    <licenseUrl>https://github.com/hxhieu/SimpleComposition/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/hxhieu/SimpleComposition</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Composition pattern</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>Composition DryIoc IOC Inversion</tags>
+  </metadata>
+</package>

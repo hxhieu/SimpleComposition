@@ -36,6 +36,7 @@
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
     <None Include="packages.config" />
+    <None Include="SimpleComposition.nuspec" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstracts\IPersistentComponent.cs" />
